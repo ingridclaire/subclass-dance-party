@@ -1,7 +1,13 @@
 // Creates and returns a new dancer object that can step
 var Dancer = function(top, left, timeBetweenSteps) {
   // use jQuery to create an HTML <span> tag
-  this.$node = $('<span class="dancer"></span>');
+  if (this instanceof BouncyDancer) {
+    this.$node = $('<span class="dancer">&#129314;</span>');
+  } else if (this instanceof BlinkyDancer){
+    this.$node = $('<span class="dancer">&#128561;</span>');
+  } else {
+    this.$node = $('<span class="dancer">&#129497;</span>');
+  }
   //refactor with this
 
   //refactor with this
@@ -34,5 +40,6 @@ Dancer.prototype.setPosition = function(top, left) {
     top: top,
     left: left
   };
+  //console.log(top);
   this.$node.css(styleSettings);
 };
