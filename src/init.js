@@ -27,7 +27,26 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    window.dancers.push(dancer);
+    console.log(window.dancers);
+
     $('body').append(dancer.$node);
   });
+
+
+  //declare a variable and set its value to the line-up button
+  $('.lineUpButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      Dancer.prototype.setPosition.call(window.dancers[i], 100);
+    }
+  });
+  //decalre a jquery onclick function for the line-up button
+
+  //iterate over the dancers arr
+  //bring all dancers to the same vertical position (re-set their top variable)
+
+
+
+
 });
 

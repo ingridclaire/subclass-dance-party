@@ -8,7 +8,6 @@ Wizard.prototype.step = function() {
 
   Dancer.prototype.step.call(this);
   this.$node.toggle();
-  console.log($("body"));
   Dancer.prototype.setPosition.call(this, $("body").height() * Math.random(), $("body").width() * Math.random());
 };
 

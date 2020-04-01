@@ -8,7 +8,7 @@ BouncyDancer.prototype.constructor = BouncyDancer;
 
 BouncyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
-  this.$node.animate({marginTop: '-=250px;'});
-  this.$node.animate({marginTop: '+=250px;'});
+  this.$node.animate({marginTop: '-=250px'});
+  this.$node.animate({marginTop: '+=250px'});
 
 };
