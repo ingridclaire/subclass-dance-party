@@ -6,7 +6,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
   } else if (this instanceof BlinkyDancer){
     this.$node = $('<span class="dancer">&#128561;</span>');
   } else {
-    this.$node = $('<span class="dancer">&#129497;</span>');
+    this.$node = $('<span class="dancer">&#129497;&#127995;&#8205;&#9792;&#65039;</span>');
   }
   //refactor with this
 
@@ -27,9 +27,11 @@ var Dancer = function(top, left, timeBetweenSteps) {
 Dancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
-
+  //version  1
   var context = this;
   setTimeout(function() {context.step();}, this.timeBetweenSteps);
+  //version 2
+  // setTimeout(this.step.bind(this), this.timeBetweenSteps); (<-- this works, but will require a refactor related to extra clock tick)
 };
 
 Dancer.prototype.setPosition = function(top, left = this.left) {

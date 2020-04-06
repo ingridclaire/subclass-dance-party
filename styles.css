@@ -1,17 +1,17 @@
 body, html{
   height:100%;
   overflow: hidden;
-  background-image: url ("../images/space.jpg");
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,74,1) 34%, rgba(0,212,255,1) 100%);
+
 
   z-index: 10;
 
 }
 body{
   margin: 0px;
-  /* background-color:#444; */
   font-size: 18px;
+  background-image: url("http://getwallpapers.com/wallpaper/full/2/8/a/943409-widescreen-dance-background-images-3840x2160.jpg");
+  /* background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,74,1) 34%, rgba(0,212,255,1) 100%); */
 
 }
 body, a:link, a:visited, a:active{
@@ -23,8 +23,9 @@ body, a:link, a:visited, a:active{
 }
 .topbar{
   height:40px;
-  background-color: #555;
+  background-color: black;
   text-align: justify;
+  color: white;
   ;
 }
 .title{
@@ -42,12 +43,15 @@ h1 {
 height: 50px;
 width: 100%;
 color: whitesmoke;
-background-color: #fbc987;
+background-color: rgb(7, 233, 158);
 text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 padding: 10px 0px 0px 10px;
 border: 0px;
 margin: 0px;
 
+}
 
+.enlarge {
+  font-size: 300px;
 }
 

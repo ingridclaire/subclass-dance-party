@@ -37,8 +37,21 @@ $(document).ready(function() {
   //declare a variable and set its value to the line-up button
   $('.lineUpButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
-      Dancer.prototype.setPosition.call(window.dancers[i], 100);
+      Dancer.prototype.setPosition.call(window.dancers[i], 250);
     }
+  });
+
+  $('.breakUpButton').on('click', function(event) {
+    for (var i = 0; i < window.dancers.length; i++) {
+      Dancer.prototype.setPosition.call(
+        window.dancers[i],
+        ($("body").height() - 200) * Math.random(),
+        $("body").width() * Math.random());
+    }
+  });
+
+  $("span.dancer").on('mouseenter', function(event) {
+    $('.dancer').css('font-size', '300px');
   });
   //decalre a jquery onclick function for the line-up button
 
